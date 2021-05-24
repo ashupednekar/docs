@@ -2,34 +2,22 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's discover **amigo-auth**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+**amigo-auth** is a cross-channel authentication system comprising of authentication, user management, wallet, payment system and much more...
 
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
+## Stateless Mechanism
 
-## Generate a new site
+Unlike traditional login systems which use the browser session to identify an authenticated user, amigo auth relies on a custom token expiry based authentication mechanism to support users coming from various channels like whatsapp, facebook, chatbots, and so on..
 
-Generate a new Docusaurus site using the **classic template**:
+Instead of passing token every time user needs to login, which can be intercepted by a man in the middle attack if proper measures are not taken, we maintain an expiring token at the backend for each user channel state, more on this in a bit.
 
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
+Let's explore how a typical user token lifecycle
 
-## Start your site
+![alt text](https://bot.lebara.sa/images/generic/files/user_token_lifecycle-2.png)
 
-Run the development server:
 
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
