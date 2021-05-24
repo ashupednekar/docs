@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'amigo-auth',
+  tagline: 'secure omnichannel auth backend',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -11,9 +11,9 @@ module.exports = {
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'amigo-auth',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'amigo-auth Logo',
         src: 'img/logo.svg',
       },
       items: [
