@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 1 
 ---
 
 # Intro
 
 Let's discover **amigo-auth**.
 
-## Getting Started
+## Getting Started 
 
 **amigo-auth** is a cross-channel authentication system comprising of authentication, user management, wallet, payment system and much more...
 
