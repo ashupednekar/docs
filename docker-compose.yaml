@@ -12,6 +12,7 @@ services:
     - ./auth/docs:/bbdocs/docs
     - ./auth/docusaurus.config.js:/bbdocs/docusaurus.config.js
     - ./auth/favicon.ico:/bbdocs/static/img/favicon.ico
+    - ./auth/logo.svg:/bbdocs/static/img/logo.svg
     networks:
       - net
 
