@@ -15,6 +15,4 @@ COPY auth/docs bbdocs/docs
 COPY auth/docusaurus.config.js bbdocs/docusaurus.config.js
 COPY ./entrypoint.sh .
 
-RUN ls
-
-ENTRYPOINT entrypoint.sh
+ENTRYPOINT ['sh', 'entrypoint.sh']
