@@ -14,4 +14,4 @@ COPY logo.svg bbdocs/static/img/logo.svg
 COPY auth/docs bbdocs/docs
 COPY auth/docusaurus.config.js bbdocs/docusaurus.config.js
 
-CMD ["serve", "-s", "build", "-l", "$PORT"]
+CMD ["serve", "-s", "build", "-l $PORT"]
