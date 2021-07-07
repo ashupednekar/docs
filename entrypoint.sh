@@ -1,1 +1,1 @@
-serve -s build -l $PORT
+serve -s build -l "$PORT"

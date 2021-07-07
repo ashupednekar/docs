@@ -13,6 +13,8 @@ COPY favicon.ico bbdocs/static/img/favicon.ico
 COPY logo.svg bbdocs/static/img/logo.svg
 COPY auth/docs bbdocs/docs
 COPY auth/docusaurus.config.js bbdocs/docusaurus.config.js
-COPY entrypoint.sh .
+COPY ./entrypoint.sh .
+
+RUN ls
 
 ENTRYPOINT entrypoint.sh
