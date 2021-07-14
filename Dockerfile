@@ -9,6 +9,7 @@ RUN npm install serve -g
 
 COPY favicon.ico bbdocs/static/img/favicon.ico
 COPY logo.svg bbdocs/static/img/logo.svg
+RUN rm -rf /bbdocs/docs
 COPY auth/docs /bbdocs/docs
 COPY auth/docusaurus.config.js bbdocs/docusaurus.config.js
 
