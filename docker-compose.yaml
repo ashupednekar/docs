@@ -4,15 +4,15 @@ services:
 
   docs:
     image: 'bankbuddy.azurecr.io/docs:latest'
-    command: bash -c "INLINE_RUNTIME_CHUNK=false npm run build && serve -s build -l 3000"
+#    command: bash -c "INLINE_RUNTIME_CHUNK=false npm run build && serve -s build -l 3000"
     container_name: docs
     ports:
       - "3000:3000"
-    volumes:
-    - ./auth/docs:/bbdocs/docs
-    - ./auth/docusaurus.config.js:/bbdocs/docusaurus.config.js
-    - ./auth/favicon.ico:/bbdocs/static/img/favicon.ico
-    - ./auth/logo.svg:/bbdocs/static/img/logo.svg
+#    volumes:
+#    - ./auth/docs:/bbdocs/docs
+#    - ./auth/docusaurus.config.js:/bbdocs/docusaurus.config.js
+#    - ./auth/favicon.ico:/bbdocs/static/img/favicon.ico
+#    - ./auth/logo.svg:/bbdocs/static/img/logo.svg
     networks:
       - net
 
