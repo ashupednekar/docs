@@ -1,8 +1,4 @@
----
-modified: 2021-07-07T09:22:02+05:30
----
-
-Hi there :grin:
+Hi there 😁
 
 Before we get into the database schema and code, let's get a quick birds eye view of user interaction with amigo-auth
 
