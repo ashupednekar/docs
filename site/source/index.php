@@ -68,70 +68,6 @@
                     <li class="toctree-l1"><a class="reference internal" href="../payment/">Payment</a>
                     </li>
                 </ul>
-                <p class="caption"><span class="caption-text">Auth</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Core</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Core/Why%20amigo-auth/">Why amigo auth</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">MFA</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Onboarding</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">User Journey</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../User%20Journey/Birds%20eye%20view/">Birds eye view</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../User%20Journey/Chatbanking/">Chatbanking</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Wallet</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
                 <p class="caption"><span class="caption-text">Source</span></p>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Index</a>
@@ -198,7 +134,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../Wallet/Use%20Cases/" class="btn btn-neutral" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../payment/" class="btn btn-neutral" title="Payment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -224,7 +160,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Wallet/Use%20Cases/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../payment/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>

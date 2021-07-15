@@ -66,70 +66,10 @@
                 </ul>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Payment</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Auth</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Auth/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Core</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Core/Why%20amigo-auth/">Why amigo auth</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">MFA</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../MFA/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Onboarding</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Onboarding/Use%20Cases/">Use Cases</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">User Journey</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../User%20Journey/Birds%20eye%20view/">Birds eye view</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../User%20Journey/Chatbanking/">Chatbanking</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Wallet</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Configurations/">Configurations</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Data%20Flow/">Data Flow</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Database%20Schema/">Database Schema</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Intro/">Intro</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Wallet/Use%20Cases/">Use Cases</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#this-submodule-takes-care-of-the-processes-involved-in-the-following-main-use-cases">This submodule takes care of the processes involved in the following main use-cases</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Source</span></p>
@@ -170,7 +110,16 @@
           <div role="main">
             <div class="section">
               
-                
+                <h3 id="payment-system">Payment System</h3>
+<p><img alt="image" src="https://www.onlineinvoices.com/css/images/features/additional_features.png" /></p>
+<p>Built to fit right in to out omni-channel ecosystem, amigo payments help users, merchants and SME's by giving them an out of the box tool to seamlessly add Invoicing, RTP and much more within their existing applications or even cutting edge consumer interaction platforms like whatsapp, messenger, google assistant and so on...</p>
+<h6 id="this-submodule-takes-care-of-the-processes-involved-in-the-following-main-use-cases">This submodule takes care of the processes involved in the following main use-cases</h6>
+<ul>
+<li>Invoice Management</li>
+<li>Request-to-Pay</li>
+<li>Money Transfer</li>
+</ul>
+<p>Let's take a deeper dive into each of these.</p>
               
             </div>
           </div>
@@ -178,7 +127,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Auth/Configurations/" class="btn btn-neutral float-right" title="Configurations">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../source/" class="btn btn-neutral float-right" title="Index">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -210,7 +159,7 @@
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Auth/Configurations/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../source/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
