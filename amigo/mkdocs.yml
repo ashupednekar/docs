@@ -4,4 +4,4 @@ theme:
   name: readthedocs
 extra:
   username: "admin"
-  password: "secret"
+  password: "secret".
