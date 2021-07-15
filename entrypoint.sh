@@ -1,0 +1,1 @@
+bash -c "INLINE_RUNTIME_CHUNK=false npm run build && serve -s build -l $PORT"
