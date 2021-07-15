@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."../../login.php?redirect=Core/Why amigo-auth/index.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -7,9 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://affinsys.com/Wallet/Intro/">
+  <link rel="canonical" href="https://affinsys.com/Core/Why%20amigo-auth/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Intro - amigo-auth</title>
+  <title>Why amigo auth - amigo-auth</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,9 +32,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Intro";
-    var mkdocs_page_input_path = "Wallet/Intro.md";
-    var mkdocs_page_url = "/Wallet/Intro/";
+    var mkdocs_page_name = "Why amigo auth";
+    var mkdocs_page_input_path = "Core/Why amigo-auth.md";
+    var mkdocs_page_url = "/Core/Why%20amigo-auth/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -39,7 +53,7 @@
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -64,8 +78,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Core</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Core/Why%20amigo-auth/">Why amigo auth</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Why amigo auth</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">MFA</span></p>
@@ -113,16 +127,16 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Wallet</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../Configurations/">Configurations</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Configurations/">Configurations</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Data%20Flow/">Data Flow</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Data%20Flow/">Data Flow</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Database%20Schema/">Database Schema</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Database%20Schema/">Database Schema</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Intro</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Intro/">Intro</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Use%20Cases/">Use Cases</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Use%20Cases/">Use Cases</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Source</span></p>
@@ -151,11 +165,11 @@
     
       
         
-          <li>Wallet &raquo;</li>
+          <li>Core &raquo;</li>
         
       
     
-    <li>Intro</li>
+    <li>Why amigo auth</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -167,7 +181,7 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>To deliver our promise of secure omni-channel authentication, we need fullwebv</p>
               
             </div>
           </div>
@@ -175,10 +189,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Use%20Cases/" class="btn btn-neutral float-right" title="Use Cases">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../MFA/Configurations/" class="btn btn-neutral float-right" title="Configurations">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Database%20Schema/" class="btn btn-neutral" title="Database Schema"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Auth/Use%20Cases/" class="btn btn-neutral" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -204,10 +218,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Database%20Schema/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../Auth/Use%20Cases/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Use%20Cases/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../MFA/Configurations/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."login.php?redirect=search.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -32,7 +46,7 @@
       <div class="wy-side-nav-search">
         <a href="./." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="./search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -157,7 +171,7 @@
 
   <h1 id="search">Search Results</h1>
 
-  <form id="content_search" action="search.html">
+  <form id="content_search" action="search.php">
     <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
     <input name="q" id="mkdocs-search-query" type="text" class="search_input search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
   </form>

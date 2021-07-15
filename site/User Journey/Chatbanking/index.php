@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."../../login.php?redirect=User Journey/Chatbanking/index.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -7,9 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://affinsys.com/Auth/Configurations/">
+  <link rel="canonical" href="https://affinsys.com/User%20Journey/Chatbanking/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Configurations - amigo-auth</title>
+  <title>Chatbanking - amigo-auth</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,9 +32,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Configurations";
-    var mkdocs_page_input_path = "Auth/Configurations.md";
-    var mkdocs_page_url = "/Auth/Configurations/";
+    var mkdocs_page_name = "Chatbanking";
+    var mkdocs_page_input_path = "User Journey/Chatbanking.md";
+    var mkdocs_page_url = "/User%20Journey/Chatbanking/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -39,7 +53,7 @@
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -51,16 +65,16 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Auth</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Configurations</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Auth/Configurations/">Configurations</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Data%20Flow/">Data Flow</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Auth/Data%20Flow/">Data Flow</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Database%20Schema/">Database Schema</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Auth/Database%20Schema/">Database Schema</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Intro/">Intro</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Auth/Intro/">Intro</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Use%20Cases/">Use Cases</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Auth/Use%20Cases/">Use Cases</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Core</span></p>
@@ -106,10 +120,20 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">User Journey</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../User%20Journey/Birds%20eye%20view/">Birds eye view</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Birds%20eye%20view/">Birds eye view</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../User%20Journey/Chatbanking/">Chatbanking</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Chatbanking</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-does-a-secure-whatsapp-banking-customer-journey-look-like">What does a secure WhatsApp banking customer journey look like?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-existing-customers">For Existing customers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-new-to-bank-ntb-customers">For New to bank (NTB) Customers</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Wallet</span></p>
@@ -151,11 +175,11 @@
     
       
         
-          <li>Auth &raquo;</li>
+          <li>User Journey &raquo;</li>
         
       
     
-    <li>Configurations</li>
+    <li>Chatbanking</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -167,7 +191,40 @@
           <div role="main">
             <div class="section">
               
-                
+                <h2 id="secure-chatbanking-journey">Secure Chatbanking journey</h2>
+<h3 id="what-does-a-secure-whatsapp-banking-customer-journey-look-like">What does a secure WhatsApp banking customer journey look like?</h3>
+<p>WhatsApp banking is replacing erstwhile USSD based mobile banking and Mobile apps due to additional security and convenience. Here’s a comprehensive list of security features we implemented at our partner banks to ensure their customers get the most secure user experience.   </p>
+<h4 id="for-existing-customers">For Existing customers</h4>
+<ol>
+<li>
+<p><strong>Registration with progressive profiling or MFA</strong> - A customer can only register with their Registered mobile number after a secondary verification from either a digital channel API or verification of personal information   </p>
+</li>
+<li>
+<p><strong>Chat Banking credentials</strong> - When the customers register they can create their own id and PIN, which will serve as the second factor of authentication for subsequent sessions. This ID is created outside of WhatsApp to prevent leaving traces in the chat history. The chat banking id and pin are not revealed anywhere in the conversations.   </p>
+</li>
+<li>
+<p><strong>Secure Session Management</strong> - A user session is created every time a customer logs in and this session is valid for a predefined period of activity or till the time the customer explicitly logs out of the session.</p>
+</li>
+</ol>
+<p><img alt="Digital onboarding options" src="https://www.bankbuddy.ai/img/posts_img/digital-onboarding-options.png" /></p>
+<ol>
+<li>
+<p><strong>KYC levels</strong> - There are KYC levels defined for customers to impose transaction and amount limits for risk management and compliance purposes. The limits can be set for individual transactions or aggregate transactions.   </p>
+</li>
+<li>
+<p><strong>Secure 2-factor authentication</strong> is done via OTP for all financial transactions like bill payments and transfers, this also ensures that the system cannot be compromised on a session on WhatsApp web.   </p>
+</li>
+<li>
+<p><strong>Data protection</strong> - All sensitive data displayed in WhatsApp is masked, PDF receipts are auto-generated for confirmations of all financial transactions. The platform allows you to secure PDF receipts and statements on your phone using passwords. So even if the customer loses their phone, their financial information is secure.</p>
+</li>
+</ol>
+<h4 id="for-new-to-bank-ntb-customers">For New to bank (NTB) Customers</h4>
+<p>Secure Onboarding - It just takes a minute to open a wallet irrespective of whether you hold an account with the bank or not.   </p>
+<p>Regular accounts like CASA, Joint accounts, SME accounts can be opened instantaneously and securely from WhatsApp and other channels with a variety of options like Debit freeze, NID check, Face match, Liveness detection, and branch/agent for second level authentication.   </p>
+<p>Safer than cash - if you need to lend or give someone money, you can transfer money to their mobile even though they do not have a wallet. All they need to do is register themselves with the special link sent to them over SMS, and use that money safely. You can also have proof of giving money!   </p>
+<p><img alt="Digital onboarding options" src="https://www.bankbuddy.ai/img/posts_img/digital-onboarding-options.png" /></p>
+<p>Customers can start using your wallet with someone funding their wallet - with KYC (national id and address proof), you can have your full-fledged Digital Banking Wallet as good as having a banking account.</p>
+<p><img alt="screenshot" src="https://i.ibb.co/4J3Hcfb/Screenshot-2021-07-14-at-12-08-17-PM.png" /></p>
               
             </div>
           </div>
@@ -175,10 +232,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Data%20Flow/" class="btn btn-neutral float-right" title="Data Flow">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Wallet/Configurations/" class="btn btn-neutral float-right" title="Configurations">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Birds%20eye%20view/" class="btn btn-neutral" title="Birds eye view"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -204,10 +261,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Birds%20eye%20view/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Data%20Flow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../Wallet/Configurations/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

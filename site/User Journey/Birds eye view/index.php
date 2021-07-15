@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."../../login.php?redirect=User Journey/Birds eye view/index.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -7,9 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://affinsys.com/Core/Why%20amigo-auth/">
+  <link rel="canonical" href="https://affinsys.com/User%20Journey/Birds%20eye%20view/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Why amigo auth - amigo-auth</title>
+  <title>Birds eye view - amigo-auth</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,9 +32,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Why amigo auth";
-    var mkdocs_page_input_path = "Core/Why amigo-auth.md";
-    var mkdocs_page_url = "/Core/Why%20amigo-auth/";
+    var mkdocs_page_name = "Birds eye view";
+    var mkdocs_page_input_path = "User Journey/Birds eye view.md";
+    var mkdocs_page_url = "/User%20Journey/Birds%20eye%20view/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -39,7 +53,7 @@
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -64,8 +78,8 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Core</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Why amigo auth</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Core/Why%20amigo-auth/">Why amigo auth</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">MFA</span></p>
@@ -106,10 +120,10 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">User Journey</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../User%20Journey/Birds%20eye%20view/">Birds eye view</a>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Birds eye view</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../User%20Journey/Chatbanking/">Chatbanking</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../Chatbanking/">Chatbanking</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Wallet</span></p>
@@ -151,11 +165,11 @@
     
       
         
-          <li>Core &raquo;</li>
+          <li>User Journey &raquo;</li>
         
       
     
-    <li>Why amigo auth</li>
+    <li>Birds eye view</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -167,7 +181,21 @@
           <div role="main">
             <div class="section">
               
-                <p>To deliver our promise of secure omni-channel authentication, we need fullwebv</p>
+                <p>Hi there 😁</p>
+<p>Before we get into the database schema and code, let's get a quick birds eye view of user interaction with amigo-auth</p>
+<p><img alt="alt:basic_auth" src="https://bot.lebara.sa/images/generic/files/basic-auth.png" /></p>
+<p>When a user attempts to perform an action deemed as a secured action (e.g. checking account statement in chatbanking), the client service, "bot" in the above example calls the check token validity endpoint to find out the current status of the user.</p>
+<ul>
+<li>
+<p>If a token doesn't exist, the user us prompted to register afresh</p>
+</li>
+<li>
+<p>If a token exists, but it's past it's expiry date, user is prompted to login</p>
+</li>
+<li>
+<p>If it's valid, token is further extended and user is allowed to proceed</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -175,10 +203,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../MFA/Configurations/" class="btn btn-neutral float-right" title="Configurations">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Chatbanking/" class="btn btn-neutral float-right" title="Chatbanking">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Auth/Use%20Cases/" class="btn btn-neutral" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Payment/Settlement/" class="btn btn-neutral" title="Settlement"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -204,10 +232,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../Auth/Use%20Cases/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../Payment/Settlement/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../MFA/Configurations/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Chatbanking/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

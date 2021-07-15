@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."../../login.php?redirect=Wallet/Database Schema/index.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -7,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://affinsys.com/MFA/Database%20Schema/">
+  <link rel="canonical" href="https://affinsys.com/Wallet/Database%20Schema/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Database Schema - amigo-auth</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
@@ -19,8 +33,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Database Schema";
-    var mkdocs_page_input_path = "MFA/Database Schema.md";
-    var mkdocs_page_url = "/MFA/Database%20Schema/";
+    var mkdocs_page_input_path = "Wallet/Database Schema.md";
+    var mkdocs_page_url = "/Wallet/Database%20Schema/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -39,7 +53,7 @@
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -69,16 +83,16 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">MFA</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../Configurations/">Configurations</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../MFA/Configurations/">Configurations</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Data%20Flow/">Data Flow</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../MFA/Data%20Flow/">Data Flow</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Database Schema</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../MFA/Database%20Schema/">Database Schema</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Intro/">Intro</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../MFA/Intro/">Intro</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../Use%20Cases/">Use Cases</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../MFA/Use%20Cases/">Use Cases</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Onboarding</span></p>
@@ -113,16 +127,16 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Wallet</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Configurations/">Configurations</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Configurations/">Configurations</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Data%20Flow/">Data Flow</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data%20Flow/">Data Flow</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Database%20Schema/">Database Schema</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Database Schema</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Intro/">Intro</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../Intro/">Intro</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Wallet/Use%20Cases/">Use Cases</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../Use%20Cases/">Use Cases</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Source</span></p>
@@ -151,7 +165,7 @@
     
       
         
-          <li>MFA &raquo;</li>
+          <li>Wallet &raquo;</li>
         
       
     

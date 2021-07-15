@@ -1,3 +1,17 @@
+<?php
+	session_start();
+	if (!$_SESSION['login']) {
+		$dirname = $_SERVER['REQUEST_URI'];
+
+		if (substr($dirname, -1) != '/') {
+			$dirname=dirname($dirname).'/';
+		} else {
+			$dirname = preg_replace('~/+~', '/', $dirname);
+		}
+
+		header("Location: ".$dirname."../../login.php?redirect=MFA/Configurations/index.php");
+	}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -7,9 +21,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="canonical" href="https://affinsys.com/MFA/Use%20Cases/">
+  <link rel="canonical" href="https://affinsys.com/MFA/Configurations/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Use Cases - amigo-auth</title>
+  <title>Configurations - amigo-auth</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,9 +32,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Use Cases";
-    var mkdocs_page_input_path = "MFA/Use Cases.md";
-    var mkdocs_page_url = "/MFA/Use%20Cases/";
+    var mkdocs_page_name = "Configurations";
+    var mkdocs_page_input_path = "MFA/Configurations.md";
+    var mkdocs_page_url = "/MFA/Configurations/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -39,7 +53,7 @@
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> amigo-auth</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.php" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -70,7 +84,7 @@
                 </ul>
                 <p class="caption"><span class="caption-text">MFA</span></p>
                 <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../Configurations/">Configurations</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Configurations</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../Data%20Flow/">Data Flow</a>
                     </li>
@@ -78,7 +92,7 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../Intro/">Intro</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Use Cases</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../Use%20Cases/">Use Cases</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Onboarding</span></p>
@@ -155,7 +169,7 @@
         
       
     
-    <li>Use Cases</li>
+    <li>Configurations</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -175,10 +189,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../Onboarding/Configurations/" class="btn btn-neutral float-right" title="Configurations">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Data%20Flow/" class="btn btn-neutral float-right" title="Data Flow">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Intro/" class="btn btn-neutral" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Core/Why%20amigo-auth/" class="btn btn-neutral" title="Why amigo auth"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -204,10 +218,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../Core/Why%20amigo-auth/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../Onboarding/Configurations/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Data%20Flow/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
