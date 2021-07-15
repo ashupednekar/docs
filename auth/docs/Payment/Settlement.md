@@ -1,1 +1,0 @@
-![rtp-image](https://i.ibb.co/V2L9mBR/r2p-removebg-preview.png)

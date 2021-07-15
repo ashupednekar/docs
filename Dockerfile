@@ -1,20 +1,22 @@
-FROM node
+FROM polinux/httpd-php
 
-RUN npx @docusaurus/init@latest init bbdocs classic
+RUN yum install python3 -y
+RUN yum install python3-pip -y
 
-WORKDIR bbdocs
+RUN pip3 install mkdocs
+RUN pip3 install mkauthdocs
 
-RUN npm install -g
-RUN npm install serve -g
+RUN mkdir /build
+WORKDIR /build
+COPY . .
 
-COPY favicon.ico bbdocs/static/img/favicon.ico
-COPY logo.svg bbdocs/static/img/logo.svg
-RUN rm -rf /bbdocs/docs
-COPY auth/docs /bbdocs/docs
-COPY auth/docusaurus.config.js bbdocs/docusaurus.config.js
+RUN chmod +x setcreds
+RUN cp setcreds /usr/bin/setcreds
 
-COPY ./entrypoint.sh .
+ENV LC_ALL=en_US.utf-8
+ENV LANG=en_US.utf-8
 
-ENV PORT=3000
+RUN rm /var/www/html/*
+RUN mkdocs build -d /var/www/html/
+RUN mkauthdocs admin bankbuddy /var/www/html/ --heading 'Login to continue'
 
-CMD ["sh", "entrypoint.sh"]

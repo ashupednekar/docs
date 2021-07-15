@@ -3,16 +3,10 @@ version: '3'
 services:
 
   docs:
-    image: 'registry.digitalocean.com/ashu/docs:latest'
-#    command: bash -c "INLINE_RUNTIME_CHUNK=false npm run build && serve -s build -l 3000"
+    image: 'docs'
     container_name: docs
     ports:
-      - "3000:3000"
-#    volumes:
-#    - ./auth/docs:/bbdocs/docs
-#    - ./auth/docusaurus.config.js:/bbdocs/docusaurus.config.js
-#    - ./auth/favicon.ico:/bbdocs/static/img/favicon.ico
-#    - ./auth/logo.svg:/bbdocs/static/img/logo.svg
+      - "3000:80"
     networks:
       - net
 

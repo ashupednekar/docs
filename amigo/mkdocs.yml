@@ -1,7 +1,0 @@
-site_name: amigo-auth
-site_url: https://affinsys.com/
-theme:
-  name: readthedocs
-extra:
-  username: "admin"
-  password: "secret"

@@ -1,0 +1,1 @@
+mkauthdocs $USERNAME $PASSWORD /var/www/html/ --heading "Login to continue"
