@@ -4,4 +4,4 @@ mkauthdocs admin bankbuddy site --heading 'Login to continue'
 git add .
 git commit -m "updated docs"
 git push
-heroku logs --app auth-docs
+heroku logs --app platform2-docs
