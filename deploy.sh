@@ -1,4 +1,4 @@
-git rm -rf site
+rm -rf site
 mkdocs build
 mkauthdocs admin bankbuddy site --heading 'Login to continue'
 git add .
