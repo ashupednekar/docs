@@ -3,7 +3,7 @@ version: '3'
 services:
 
   docs:
-    image: 'bankbuddy.azurecr.io/docs:latest'
+    image: 'registry.digitalocean.com/ashu/docs:latest'
 #    command: bash -c "INLINE_RUNTIME_CHUNK=false npm run build && serve -s build -l 3000"
     container_name: docs
     ports:
