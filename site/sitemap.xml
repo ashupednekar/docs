@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://affinsys.com/payment/</loc>
+         <lastmod>2021-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://affinsys.com/Auth/Configurations/</loc>
          <lastmod>2021-07-15</lastmod>
          <changefreq>daily</changefreq>
@@ -82,26 +87,6 @@
     </url>
     <url>
          <loc>https://affinsys.com/Onboarding/Use%20Cases/</loc>
-         <lastmod>2021-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://affinsys.com/Payment/Database%20Schema/</loc>
-         <lastmod>2021-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://affinsys.com/Payment/Intro/</loc>
-         <lastmod>2021-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://affinsys.com/Payment/Request%20Management/</loc>
-         <lastmod>2021-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://affinsys.com/Payment/Settlement/</loc>
          <lastmod>2021-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
