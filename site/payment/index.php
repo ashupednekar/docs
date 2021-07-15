@@ -67,8 +67,6 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Payment</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#this-submodule-takes-care-of-the-processes-involved-in-the-following-main-use-cases">This submodule takes care of the processes involved in the following main use-cases</a>
-    </li>
     </ul>
                     </li>
                 </ul>
@@ -110,10 +108,10 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="payment-system">Payment System</h3>
+                <h2 id="payment-system">Payment System</h2>
 <p><img alt="image" src="https://www.onlineinvoices.com/css/images/features/additional_features.png" /></p>
 <p>Built to fit right in to out omni-channel ecosystem, amigo payments help users, merchants and SME's by giving them an out of the box tool to seamlessly add Invoicing, RTP and much more within their existing applications or even cutting edge consumer interaction platforms like whatsapp, messenger, google assistant and so on...</p>
-<h6 id="this-submodule-takes-care-of-the-processes-involved-in-the-following-main-use-cases">This submodule takes care of the processes involved in the following main use-cases</h6>
+<p>This submodule takes care of the processes involved in the following main use-cases</p>
 <ul>
 <li>Invoice Management</li>
 <li>Request-to-Pay</li>
